@@ -28,10 +28,6 @@ document.addEventListener('keydown', (e)=>{
 });
 
 // Scroll to Home
-// document.getElementById("navHome").addEventListener("click", function(e) {
-//   e.preventDefault();
-//   document.getElementById("home").scrollIntoView({ behavior: "smooth" });
-// });
 
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".navHome");
@@ -55,28 +51,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Load Product page dynamically
-document.getElementById("navProduct").addEventListener("click", function(e) {
-  e.preventDefault();
-  
-  // Fetch Product.html from Pages folder
+
+// Preload product section on page load
+window.addEventListener("DOMContentLoaded", () => {
   fetch("Pages/product.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("product").innerHTML = data;
 
-      // Attach Product CSS dynamically
+      // Load Product CSS
       let link = document.createElement("link");
       link.rel = "stylesheet";
       link.href = "Style/product.css";
       document.head.appendChild(link);
 
-      // Attach Product JS dynamically
+      // Load Product JS
       let script = document.createElement("script");
       script.src = "Script/product.js";
       document.body.appendChild(script);
-
-      // Scroll down to Product section
-      document.getElementById("product").scrollIntoView({ behavior: "smooth" });
     })
-    .catch(err => console.error("Error loading product:", err));
+    .catch(err => console.error("Error preloading product:", err));
 });
+
+
+
