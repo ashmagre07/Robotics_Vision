@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Robotix — Hero</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <button id="openMenu" class="icon-btn menu-btn" aria-label="Open menu">
+      <!-- simple hamburger -->
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+    </button>
+
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#" id="navHome">Home</a></li>
+        <li><a href="#product" id="navProduct">Product</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="controls">
+      <button class="icon-btn search-btn" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Side drawer -->
+  <aside id="sideDrawer" class="side-drawer" aria-hidden="true">
+    <button id="closeMenu" class="close-btn" aria-label="Close menu">&times;</button>
+    <div class="drawer-content">
+      <h2>Sign In</h2>
+      <ul class="drawer-links">
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">Dealership</a></li>
+        <li><a href="#">Blogs</a></li>
+      </ul>
+
+      <div class="contact">
+        <h3>Get in Touch</h3>
+        <p>email: contact@robotix.example</p>
+        <p>Phone: +91 98765 43210</p>
+        <p class="hours">(Mon - Sat: 9am - 7pm)</p>
+      </div>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay" hidden></div>
+
+  <!-- Hero -->
+  <main class="hero" role="main">
+    <div class="hero-inner">
+      <p class="tag">Say hello to the future of robotics</p>
+      <h1 class="hero-title">ROBOTICS<br/>ONE</h1>
+
+      <div class="hero-meta">
+        <div class="meta-line">Precision engineering with AI-driven control.</div>
+        <div class="meta-line">Designed & built for the real world.</div>
+      </div>
+    </div>
+  </main>
+
+  <script src="index.js"></script>
+   <section id="product" class="product-section"></section>
+</body>
+</html>
