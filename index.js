@@ -74,4 +74,24 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Preload Blog section on page load
+window.addEventListener("DOMContentLoaded", () => {
+  fetch("Pages/blog.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("blog").innerHTML = data;
+
+      // Load Blog CSS
+      let link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "Style/blog.css";
+      document.head.appendChild(link);
+
+      // Load Blog JS
+      let script = document.createElement("script");
+      script.src = "Script/blog.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error("Error preloading blog:", err));
+});
 
