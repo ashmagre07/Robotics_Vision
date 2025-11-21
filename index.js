@@ -1,3 +1,4 @@
+
 // drawer control
 const openMenu = document.getElementById('openMenu');
 const closeMenu = document.getElementById('closeMenu');
@@ -28,10 +29,6 @@ document.addEventListener('keydown', (e)=>{
 });
 
 // Scroll to Home
-// document.getElementById("navHome").addEventListener("click", function(e) {
-//   e.preventDefault();
-//   document.getElementById("home").scrollIntoView({ behavior: "smooth" });
-// });
 
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".navHome");
@@ -55,28 +52,101 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Load Product page dynamically
-document.getElementById("navProduct").addEventListener("click", function(e) {
-  e.preventDefault();
-  
-  // Fetch Product.html from Pages folder
+
+// Preload product section on page load
+window.addEventListener("DOMContentLoaded", () => {
   fetch("Pages/product.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("product").innerHTML = data;
 
-      // Attach Product CSS dynamically
+      // Load Product CSS
       let link = document.createElement("link");
       link.rel = "stylesheet";
       link.href = "Style/product.css";
       document.head.appendChild(link);
 
-      // Attach Product JS dynamically
+      // Load Product JS
       let script = document.createElement("script");
       script.src = "Script/product.js";
       document.body.appendChild(script);
-
-      // Scroll down to Product section
-      document.getElementById("product").scrollIntoView({ behavior: "smooth" });
     })
-    .catch(err => console.error("Error loading product:", err));
+    .catch(err => console.error("Error preloading product:", err));
 });
+
+//-------------------------------------------------------------------------------------------//
+
+
+
+//-----------------------------------------------------------------------------------------//
+
+
+
+// Load Blog page dynamically
+window.addEventListener("load", () => {
+  if (window.location.hash === "#blog") {
+    const target = document.getElementById("blog");
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth" });
+      }, 200); // delay to wait for layout to settle
+    }
+  }
+});
+
+// Preload Blog section on page load
+window.addEventListener("DOMContentLoaded", () => {
+  fetch("Pages/blog.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("blog").innerHTML = data;
+
+      // Load Blog CSS
+      let link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "Style/blog.css";
+      document.head.appendChild(link);
+
+      // Load Blog JS
+      let script = document.createElement("script");
+      script.src = "Script/blog.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error("Error preloading blog:", err));
+});
+
+
+
+// About us
+// Load About Us page
+// PRELOAD ABOUT US SECTION ON PAGE LOAD
+window.addEventListener("DOMContentLoaded", () => {
+  fetch("Pages/aboutUs.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("aboutUs").innerHTML = data;
+
+      // Load About CSS
+      let link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "Style/aboutUs.css";
+      document.head.appendChild(link);
+
+      // Load About JS for animation
+      let script = document.createElement("script");
+      script.src = "Script/aboutUs.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error("Error loading About Us:", err));
+});
+
+
+// Load contact.html inside index page
+window.addEventListener("DOMContentLoaded", () => {
+    fetch("Pages/contactUs.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("contact-container").innerHTML = data;
+      });
+  });
+

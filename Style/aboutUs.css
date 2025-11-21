@@ -1,0 +1,45 @@
+.aboutUs-container {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 120px; /* creates space after navbar */
+  text-align: center;
+  color: white;
+
+  background: url("../Images/AboutUs.avif") no-repeat center center/cover;
+  position: relative;
+}
+
+.aboutUs-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.aboutUs-container h2 {
+  font-size: 5.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.about-final-text {
+  font-size: 2.1rem;
+  white-space: nowrap;   /* 🔥 prevents line break */
+  margin: 20px auto 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.about-final-text-2 {
+  font-size: 1.4rem;
+  white-space: nowrap;   /* 🔥 prevents line break */
+  margin: 70px auto 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}

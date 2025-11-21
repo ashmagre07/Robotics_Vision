@@ -6,42 +6,42 @@
   <title>Robotix — Hero</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="./Style/blog.css" />
+  <link rel="stylesheet" href="./Style/contactUs.css" />
+  <link rel="stylesheet" href="./Style/mobile.css">
 </head>
-<body>
+<body id="top">
   <!-- Header -->
   <header class="site-header">
     <button id="openMenu" class="icon-btn menu-btn" aria-label="Open menu">
       <!-- simple hamburger -->
-      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      <!-- <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> -->
     </button>
 
 
     <nav class="main-nav">
       <ul>
-        <li><a href="#" id="navHome">Home</a></li>
+        <li><a href="#top" id="navHome">Home</a></li>
         <li><a href="#product" id="navProduct">Product</a></li>
-        <li><a href="#">Blogs</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><a href="#blog" id="loadBlog">Blog</a></li>
+       <!-- <li><a href="#blog" id="navBlog">Blogs</a></li> --> 
+        <li><a href="#aboutUs" id="navAbout">About Us</a></li>
       </ul>
     </nav>
 
-    <div class="controls">
-      <button class="icon-btn search-btn" aria-label="Search">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z"/></svg>
-      </button>
-    </div>
   </header>
 
   <!-- Side drawer -->
   <aside id="sideDrawer" class="side-drawer" aria-hidden="true">
     <button id="closeMenu" class="close-btn" aria-label="Close menu">&times;</button>
-    <div class="drawer-content">
+    <!-- <div class="drawer-content">
       <h2>Sign In</h2>
       <ul class="drawer-links">
         <li><a href="#">FAQs</a></li>
         <li><a href="#">Media</a></li>
         <li><a href="#">Dealership</a></li>
-        <li><a href="#">Blogs</a></li>
+      
+        
       </ul>
 
       <div class="contact">
@@ -49,7 +49,7 @@
         <p>email: contact@robotix.example</p>
         <p>Phone: +91 98765 43210</p>
         <p class="hours">(Mon - Sat: 9am - 7pm)</p>
-      </div>
+      </div> -->
     </div>
   </aside>
 
@@ -57,18 +57,76 @@
 
   <!-- Hero -->
   <main class="hero" role="main">
-    <div class="hero-inner">
-      <p class="tag">Say hello to the future of robotics</p>
-      <h1 class="hero-title">ROBOTICS<br/>ONE</h1>
+
+    <!-- Background Video -->
+     <video class="hero-video" autoplay muted loop playsinline>
+    <source src="Videos/Video4.mp4" type="video/mp4">
+    </video>
+
+  <div class="hero-inner">
+      <h1 class="hero-title ">ROAVAI</h1>
+
+      <p class="tag">A Robot that Learns, Loves, and Lives with You</p>
+
+      <p >“Meet the next generation of intelligent companion pet robot that is intelligent, learns, plays, and bonds with you.</p>
+     
 
       <div class="hero-meta">
-        <div class="meta-line">Precision engineering with AI-driven control.</div>
-        <div class="meta-line">Designed & built for the real world.</div>
+        <div class="meta-line"><strong>🧠 Learns You </strong>-– Recognises faces and voices..</div>
+        <div class="meta-line"><strong>❤️ Feels Alive </strong>-– Expressive eyes, gestures, and sounds.</div>
+        <div class="meta-line"><strong>⚡ Self-Charging </strong>-– Always full ready to play..</div>
       </div>
-    </div>
+    
+        <!-- About ROAVAI Section -->
+      <!-- <section class="about-roavai">
+        <div class="about-container">
+        <h2>About ROAVAI</h2>
+        <p>
+          ROAVAI is a next-generation robot pet designed to bring joy, comfort, and interaction into your daily life.
+          It doesn’t just respond — it learns, adapts, and connects with you over time.
+        </p>
+        <p>
+          Whether you live in an apartment, can’t own a real pet, or simply want a fun companion —
+          <strong>ROAVAI</strong> gives you the love and energy of a pet, powered by safe AI.
+        </p>
+        </div>
+      </section> -->
+</div>
+
   </main>
 
-  <script src="index.js"></script>
-   <section id="product" class="product-section"></section>
+<!-- Product section-->
+  <section id="product" class="product-section"></section>
+
+    <!-- Blog section-->
+<section id="blog" class="blog-section"></section>
+
+ <!-- About section-->
+<section id="aboutUs" class="about-section"></section>
+
+
+  <!-- Contact Us section-->
+  
+<h1 class="title">Contact Us</h1>
+
+<form id="contactForm" class="contact-form">
+  
+  <div class="row">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+  </div>
+
+  <textarea id="message" placeholder="Message" required></textarea>
+
+  <button type="submit" class="submit-btn">Send message</button>
+
+</form>
+
+
+   <script src="index.js"></script>
+  <script src="Script/blog.js"></script>
+  <script src="Script/contactUs.js"></script>
+
 </body>
+
 </html>
