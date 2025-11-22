@@ -42,7 +42,7 @@ featureItems.forEach(item => {
 
 
   video.pause();
-  videoSource.src = "videos/" + videoFile;
+  videoSource.src = "Videos/" + videoFile;
   video.load();
 
   video.onloadeddata = () => {
@@ -90,7 +90,7 @@ if (window.innerWidth > 412) {
     const videoFile = item.dataset.video;
 
     // update video
-    videoSource.src = "videos/" + videoFile;
+    videoSource.src = "Videos/" + videoFile;
     video.load();
     video.play();
     });
@@ -119,7 +119,7 @@ mobileFeatures.forEach(item => {
     // video.play();
 
        video.pause();
-videoSource.src = "videos/" + videoFile;
+videoSource.src = "Videos/" + videoFile;
 video.load();
 
 video.onloadeddata = () => {
