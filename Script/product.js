@@ -12,13 +12,63 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //-------------------------------------------------------------------------------------------//
 
-const featureItems = document.querySelectorAll(".feature-item");
-const video = document.getElementById("featureVideo");
-const videoSource = video.querySelector("source");
-const subtitleBox = document.getElementById("videoSubtitle");
+// const featureItems = document.querySelectorAll(".feature-item");
+// const video = document.getElementById("featureVideo");
+// const videoSource = video.querySelector("source");
+// const subtitleBox = document.getElementById("videoSubtitle");
 
 
-featureItems.forEach(item => {
+// featureItems.forEach(item => {
+//   item.addEventListener("mouseenter", () => {
+
+//     // remove active class
+//     document.querySelector(".feature-item.active")?.classList.remove("active");
+
+//      document.querySelectorAll(".feature-item").forEach(i => {
+//       if (i !== item) i.classList.remove("open");
+//     });
+
+//     item.classList.add("open");
+//     // add active class to clicked
+//     item.classList.add("active");
+
+//     // get file
+//     const videoFile = item.dataset.video;
+
+//     // update video
+//     videoSource.src = "videos/" + videoFile;
+//     video.load();
+//     video.play();
+
+//     // // Change subtitle text
+//     // const text = item.querySelector(".feature-subtext p").innerText;
+//     // subtitleBox.innerText = text;
+//     // subtitleBox.style.opacity = "1";
+
+//   });
+// });
+
+// --- Mobile view toggle ---\
+
+// Desktop (hover) — only if device width > 768
+if (window.innerWidth > 768) {
+  const featureItems = document.querySelectorAll(".feature-item");
+  const video = document.getElementById("featureVideo");
+  const videoSource = video.querySelector("source");
+  const subtitleBox = document.getElementById("videoSubtitle");
+
+
+  // featureItems.forEach(item => {
+  //   item.addEventListener("mouseenter", () => {
+  //     document.querySelector(".feature-item.active")?.classList.remove("active");
+  //     item.classList.add("active");
+
+  //     const videoFile = item.dataset.video;
+  //     videoSource.src = "videos/" + videoFile;
+  //     video.load();
+  //     video.play();
+
+  featureItems.forEach(item => {
   item.addEventListener("mouseenter", () => {
 
     // remove active class
@@ -39,53 +89,14 @@ featureItems.forEach(item => {
     videoSource.src = "videos/" + videoFile;
     video.load();
     video.play();
-
-    // // Change subtitle text
-    // const text = item.querySelector(".feature-subtext p").innerText;
-    // subtitleBox.innerText = text;
-    // subtitleBox.style.opacity = "1";
-
+    });
   });
-});
+}
 
-
-// - Mobile View ----------------------------//
-//const mobileFeatures = document.querySelectorAll(".feature-item");
-
-// mobileFeatures.forEach(item => {
-//   item.addEventListener("click", () => {
-
-//     // Collapse others
-//     mobileFeatures.forEach(f => {
-//       if (f !== item) f.classList.remove("active");
-//     });
-
-//     // Toggle this one
-//     item.classList.toggle("active");
-//   });
-// });
-
-// MOBILE toggle
-// mobileFeatures.forEach(item => {
-//   item.addEventListener("click", () => {
-
-//     // Close others
-//     mobileFeatures.forEach(f => {
-//       if (f !== item) f.classList.remove("active");
-//     });
-
-//     // Toggle current one
-//     item.classList.toggle("active");
-
-//      // KEEP horizontal list height small
-//     document.querySelector(".features-list").style.height =
-//       item.classList.contains("active") ? "auto" : "auto";
-//   });
-// });
-
-// --- Mobile view toggle ---
+// Desktop video hover
 const mobileFeatures = document.querySelectorAll(".feature-item");
 
+// // Mobile click to toggle
 mobileFeatures.forEach(item => {
   item.addEventListener("click", () => {
 
@@ -104,6 +115,17 @@ mobileFeatures.forEach(item => {
     video.play();
   });
 });
+
+// mobileFeatures.forEach(item => {
+//   item.addEventListener("click", () => {
+
+//     mobileFeatures.forEach(f => {
+//       if (f !== item) f.classList.remove("active");
+//     });
+
+//     item.classList.toggle("active");
+//   });
+// });
 
 
 // Optional: hide text when leaving left menu
