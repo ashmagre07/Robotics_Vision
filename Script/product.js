@@ -41,19 +41,13 @@ featureItems.forEach(item => {
     // video.play();
 
 
-    video.pause();
-videoSource.src = "videos/" + videoFile;
-video.load();
+  video.pause();
+  videoSource.src = "videos/" + videoFile;
+  video.load();
 
-video.onloadeddata = () => {
+  video.onloadeddata = () => {
   video.play().catch(() => {});
 };
-
-
-    // // Change subtitle text
-    // const text = item.querySelector(".feature-subtext p").innerText;
-    // subtitleBox.innerText = text;
-    // subtitleBox.style.opacity = "1";
 
   });
 });
