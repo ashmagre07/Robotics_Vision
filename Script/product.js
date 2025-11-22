@@ -55,7 +55,7 @@ featureItems.forEach(item => {
 // --- Mobile view toggle ---\
 
 // Desktop (hover) — only if device width > 768
-if (window.innerWidth > 768) {
+if (window.innerWidth > 412) {
   const featureItems = document.querySelectorAll(".feature-item");
   const video = document.getElementById("featureVideo");
   const videoSource = video.querySelector("source");
@@ -95,10 +95,10 @@ if (window.innerWidth > 768) {
     video.play();
     });
   });
-}
+
 
 // Desktop video hover
-const mobileFeatures = document.querySelectorAll(".feature-item");
+// const mobileFeatures = document.querySelectorAll(".feature-item");
 
 // // Mobile click to toggle
 mobileFeatures.forEach(item => {
@@ -127,6 +127,8 @@ video.onloadeddata = () => {
 };
   });
 });
+
+}
 
 // mobileFeatures.forEach(item => {
 //   item.addEventListener("click", () => {
