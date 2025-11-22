@@ -15,8 +15,19 @@
 }
 
 /* ===== HERO MOBILE ===== */
-@media (max-width: 600px) {
-    
+@media (max-width: 768px) {
+      * {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  body, html {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+}
 
   .hero-inner {
     /* margin-left: 0;
@@ -69,7 +80,7 @@
 
   }
 
-}
+
 
 /* ===== PRODUCT MOBILE ===== */
 /* ===== PRODUCT MOBILE FINAL FIX ===== */

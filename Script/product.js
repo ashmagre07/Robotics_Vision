@@ -12,41 +12,41 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //-------------------------------------------------------------------------------------------//
 
-// const featureItems = document.querySelectorAll(".feature-item");
-// const video = document.getElementById("featureVideo");
-// const videoSource = video.querySelector("source");
-// const subtitleBox = document.getElementById("videoSubtitle");
+const featureItems = document.querySelectorAll(".feature-item");
+const video = document.getElementById("featureVideo");
+const videoSource = video.querySelector("source");
+const subtitleBox = document.getElementById("videoSubtitle");
 
 
-// featureItems.forEach(item => {
-//   item.addEventListener("mouseenter", () => {
+featureItems.forEach(item => {
+  item.addEventListener("mouseenter", () => {
 
-//     // remove active class
-//     document.querySelector(".feature-item.active")?.classList.remove("active");
+    // remove active class
+    document.querySelector(".feature-item.active")?.classList.remove("active");
 
-//      document.querySelectorAll(".feature-item").forEach(i => {
-//       if (i !== item) i.classList.remove("open");
-//     });
+     document.querySelectorAll(".feature-item").forEach(i => {
+      if (i !== item) i.classList.remove("open");
+    });
 
-//     item.classList.add("open");
-//     // add active class to clicked
-//     item.classList.add("active");
+    item.classList.add("open");
+    // add active class to clicked
+    item.classList.add("active");
 
-//     // get file
-//     const videoFile = item.dataset.video;
+     // get file
+    const videoFile = item.dataset.video;
 
-//     // update video
-//     videoSource.src = "videos/" + videoFile;
-//     video.load();
-//     video.play();
+    // update video
+    videoSource.src = "videos/" + videoFile;
+    video.load();
+    video.play();
 
-//     // // Change subtitle text
-//     // const text = item.querySelector(".feature-subtext p").innerText;
-//     // subtitleBox.innerText = text;
-//     // subtitleBox.style.opacity = "1";
+    // // Change subtitle text
+    // const text = item.querySelector(".feature-subtext p").innerText;
+    // subtitleBox.innerText = text;
+    // subtitleBox.style.opacity = "1";
 
-//   });
-// });
+  });
+});
 
 // --- Mobile view toggle ---\
 
