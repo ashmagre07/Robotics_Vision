@@ -351,7 +351,43 @@
 }
 
 
-/* ================= CONTACT S SECTION =================== */
+
+/* ================= BLOG SECTION =================== */
+@media (max-width: 412px) {
+.blog-section {
+    width: 100%;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  }
+  /* Text content  */
+.blog-content{
+    position: relative;
+  margin-right: 80px;
+}
+
+/* .blog-content h2{
+  font-size: 1rem;
+  margin-top: 50px;
+} */
+.blog-card{
+    width: 90px;
+    font-size: 0.5rem;
+  line-height: 1;
+}
+
+ .blog-preview h2 {
+  margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+
+  .blog-preview p {
+    font-size: 0.5rem;
+  }
+
+}
+
+/* ================= CONTACT US SECTION =================== */
 @media (max-width: 412px) {
 .title{
     text-align: center; 
