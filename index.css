@@ -246,15 +246,16 @@ hero-inner h2 {
   align-items: center;
   flex-wrap: nowrap;  /* force everything into one line */
   opacity: 0;
-  transform: translateY(800px);
-  animation: fadeUp 5s ease-out forwards;
+  /* transform: translateY(800px);
+  animation: fadeUp 5s ease-out forwards; */
   padding-left: 3cm;
+  margin-right: 10px;
   
 }
 
-.hero-meta {
+/* .hero-meta {
   animation-delay: 0.5s;
-}
+} */
 
 .sub-headlines{
   margin:0 0 8px 0;

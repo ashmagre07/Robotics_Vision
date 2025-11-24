@@ -392,6 +392,7 @@
 
   .about-title {
     font-size: 3.5rem !important;
+   font-style: italic !important;
     margin-top: 30px;
     margin-bottom: 12px;
     text-align: center;
@@ -400,15 +401,24 @@
 
   .about-reveal-text {
     font-size: 3.4rem !important;
+       font-style: italic !important;
+
     line-height: 1.35;
-    top: 48% !important;        /* little down */
+    top: 58% !important;        /* little down */
     transform: translateY(-70%) !important;
-    padding: 0 24px;
+      transition: opacity .40s, transform .40s;
+
+    /* padding: 30px 70px; */
     text-shadow: 0px 4px 18px rgba(0,0,0,0.65); /* readability */
   }
   .about-reveal-text.fade {
   opacity: 0;
   transform: translateY(-20%);
+}
+.about-scroll-box::after {
+  content: "";
+  display: block;
+  height: 200vh;   /* controls how long the user scrolls */
 }
 
 }
